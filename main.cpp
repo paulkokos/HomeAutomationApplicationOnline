@@ -1,17 +1,11 @@
-//
-// Created by paulkokos on 3/11/2021.
-//
+#include "mainwindow.h"
 
-// You may need to build the project (run Qt uic code generator) to get "ui_main.h" resolved
+#include <QApplication>
 
-#include "main.h"
-#include "ui_main.h"
-
-main::main(QWidget *parent) :
-        QMainWindow(parent), ui(new Ui::main) {
-    ui->setupUi(this);
-}
-
-main::~main() {
-    delete ui;
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
 }
